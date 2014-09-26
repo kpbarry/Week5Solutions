@@ -1,0 +1,20 @@
+﻿@model MvcPractice.Models.Patients
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div>
+Name: @Model.Name<br />
+BloodGroup: @Model.BloodGroup<br />
+ContactInfo: @Model.ContactInfo<br />
+Address: @Model.Address<br />
+Medical Report: @Model.MedicalReport
+</div>
+
+<p>
+    <a href="@Url.Action("Index", "Patients")">
+        Back to List
+    </a>
+
+</p>

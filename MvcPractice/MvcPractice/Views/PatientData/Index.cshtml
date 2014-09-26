@@ -1,5 +1,18 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@model IEnumerable<MvcPractice.Models.Patients>
+@{
+    ViewBag.Title = "List of Contact Forms";
 }
 
-<h2>Index</h2>
+<h2>List of Contact Forms</h2>
+@foreach (var item in Model)
+{
+    <div>
+    @item.Name - @item.BloodGroup  <br />
+        <a href="@Url.Action("Index", "Patients", new{ID = item.PatientID})">Details</a>
+        &nbsp|&nbsp
+        <a href="@Url.Action("Edit", "Patients", new {id= item.PatientID})">Edit</a>
+        &nbsp|&nbsp
+        <a href="@Url.Action("Delete", "Patients", new {id= item.PatientID})">Delete</a>
+        </div>
+    
+}

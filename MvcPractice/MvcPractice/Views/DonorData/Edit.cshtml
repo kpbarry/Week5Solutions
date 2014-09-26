@@ -1,0 +1,46 @@
+﻿@model MvcPractice.Models.Donors
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Donors</h2>
+<form action="@Url.Action("Edit", "Donors")" method="post">
+    @*add a hidden field to hold the ID*@
+    <br />
+    <span>
+    @Html.HiddenFor(x => x.DonorID)
+    </span>
+        <div>
+        @*create lable, text box, and the validation for each proprety*@
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name)
+        @Html.ValidationMessageFor(x => x.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.ContactInfo)
+        @Html.TextBoxFor(x => x.ContactInfo)
+        @Html.ValidationMessageFor(x => x.ContactInfo)
+    </div>
+      <div>
+        @Html.LabelFor(x => x.Address)
+        @Html.TextAreaFor(x => x.Address)
+        @Html.ValidationMessageFor(x => x.Address)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.BloodGroup)
+        @Html.TextAreaFor(x => x.BloodGroup)
+        @Html.ValidationMessageFor(x => x.BloodGroup)
+    </div>
+     <div>
+        @Html.LabelFor(x => x.MedicalReport)
+        @Html.TextAreaFor(x => x.MedicalReport)
+        @Html.ValidationMessageFor(x => x.MedicalReport)
+    </div>
+
+    <input type="submit" value="Click Me Homes!" />
+</form>
+@*ADD a reference to jQuery Validation*@
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    }

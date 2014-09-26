@@ -128,7 +128,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\BloodBanksController.cs" />
+    <Compile Include="Controllers\DonorDataController.cs" />
+    <Compile Include="Controllers\DonorFormsController.cs" />
+    <Compile Include="Controllers\PatientDataController.cs" />
+    <Compile Include="Controllers\PatientFormsController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HighScoresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -172,6 +175,7 @@
     <Compile Include="Models\Donor.cs">
       <DependentUpon>BloodBanks.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DonorValidation.cs" />
     <Compile Include="Models\HighScore.cs">
       <DependentUpon>HighScores.tt</DependentUpon>
     </Compile>
@@ -193,6 +197,7 @@
     <Compile Include="Models\Patient.cs">
       <DependentUpon>BloodBanks.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PatientValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -340,6 +345,14 @@
     <Content Include="Views\HighScores\Hangman.cshtml" />
     <Content Include="Views\HighScores\Trivia.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\DonorForms\ThankYou.cshtml" />
+    <Content Include="Views\PatientForms\ThankYou.cshtml" />
+    <Content Include="Views\PatientData\Index.cshtml" />
+    <Content Include="Views\DonorData\Delete.cshtml" />
+    <Content Include="Views\DonorData\Edit.cshtml" />
+    <Content Include="Views\DonorData\Index.cshtml" />
+    <Content Include="Views\PatientData\Details.cshtml" />
+    <Content Include="Views\DonorData\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
